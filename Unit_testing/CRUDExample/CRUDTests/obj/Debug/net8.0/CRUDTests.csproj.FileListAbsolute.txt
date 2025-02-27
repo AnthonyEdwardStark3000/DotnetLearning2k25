@@ -98,3 +98,10 @@ U:\Dotnet_2k25\Unit_testing\CRUDExample\CRUDTests\obj\Debug\net8.0\refint\CRUDTe
 U:\Dotnet_2k25\Unit_testing\CRUDExample\CRUDTests\obj\Debug\net8.0\CRUDTests.pdb
 U:\Dotnet_2k25\Unit_testing\CRUDExample\CRUDTests\obj\Debug\net8.0\CRUDTests.genruntimeconfig.cache
 U:\Dotnet_2k25\Unit_testing\CRUDExample\CRUDTests\obj\Debug\net8.0\ref\CRUDTests.dll
+U:\Dotnet_2k25\Unit_testing\CRUDExample\CRUDTests\bin\Debug\net8.0\CoverletSourceRootsMapping_CRUDTests
+U:\Dotnet_2k25\Unit_testing\CRUDExample\CRUDTests\bin\Debug\net8.0\Entities.dll
+U:\Dotnet_2k25\Unit_testing\CRUDExample\CRUDTests\bin\Debug\net8.0\ServiceContracts.dll
+U:\Dotnet_2k25\Unit_testing\CRUDExample\CRUDTests\bin\Debug\net8.0\Services.dll
+U:\Dotnet_2k25\Unit_testing\CRUDExample\CRUDTests\bin\Debug\net8.0\Entities.pdb
+U:\Dotnet_2k25\Unit_testing\CRUDExample\CRUDTests\bin\Debug\net8.0\ServiceContracts.pdb
+U:\Dotnet_2k25\Unit_testing\CRUDExample\CRUDTests\bin\Debug\net8.0\Services.pdb

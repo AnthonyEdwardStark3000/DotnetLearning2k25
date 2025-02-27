@@ -1,0 +1,12 @@
+U:\Dotnet_2k25\Unit_testing\CRUDExample\Entities\bin\Debug\net8.0\Entities.deps.json
+U:\Dotnet_2k25\Unit_testing\CRUDExample\Entities\bin\Debug\net8.0\Entities.dll
+U:\Dotnet_2k25\Unit_testing\CRUDExample\Entities\bin\Debug\net8.0\Entities.pdb
+U:\Dotnet_2k25\Unit_testing\CRUDExample\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+U:\Dotnet_2k25\Unit_testing\CRUDExample\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+U:\Dotnet_2k25\Unit_testing\CRUDExample\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+U:\Dotnet_2k25\Unit_testing\CRUDExample\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+U:\Dotnet_2k25\Unit_testing\CRUDExample\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+U:\Dotnet_2k25\Unit_testing\CRUDExample\Entities\obj\Debug\net8.0\Entities.dll
+U:\Dotnet_2k25\Unit_testing\CRUDExample\Entities\obj\Debug\net8.0\refint\Entities.dll
+U:\Dotnet_2k25\Unit_testing\CRUDExample\Entities\obj\Debug\net8.0\Entities.pdb
+U:\Dotnet_2k25\Unit_testing\CRUDExample\Entities\obj\Debug\net8.0\ref\Entities.dll
