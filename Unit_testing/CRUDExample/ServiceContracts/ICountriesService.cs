@@ -12,11 +12,18 @@ namespace ServiceContracts
         /// </summary>
         /// <param name="countryAddRequest">Country Object to be added</param>
         /// <returns>Returns the country Object as response</returns>
-       public CountryResponse AddCountry(CountryAddRequest?countryAddRequest);
+       public CountryResponse AddCountry(CountryAddRequest? countryAddRequest);
         /// <summary>
         /// Returns all countries from the list.
         /// </summary>
         /// <returns>All countries as List<CountryResponse></returns>
        public List<CountryResponse> GetAllCountries();
+        /// <summary>
+        /// Returns CountryResponse object based on the given countryID and null if no result is found.
+        /// It does not throw an exception if the country is not found.
+        /// </summary>
+        /// <returns>Matching Country as countryResponse Object<CountryResponse></returns>
+        CountryResponse? GetCountryByCountryID(Guid? CountryID);
+
     }
 }

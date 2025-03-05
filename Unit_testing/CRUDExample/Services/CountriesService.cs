@@ -6,6 +6,9 @@ namespace Services
 {
     public class CountriesService : ICountriesService
     {
+        /// <summary>
+        /// It is known as a Data store
+        /// </summary>
         // private field
         private readonly List<Country> _countries;
 
@@ -14,6 +17,7 @@ namespace Services
         {
             _countries = new List<Country>();
         }
+        #region AddCountry
         public CountryResponse AddCountry(CountryAddRequest? countryAddRequest)
         {
             // Check if countryAddRequest is not null
@@ -48,10 +52,42 @@ namespace Services
             _countries.Add(country);
             return country.ToCountryResponse();
         }
+        #endregion
 
+        /// <summary>
+        /// Returns all countries from the list
+        /// </summary>
+        /// <returns>All countries from the list<CountryResponse></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        #region Get All Countries
         public List<CountryResponse> GetAllCountries()
         {
-            throw new NotImplementedException();
+            // LINQ statement with lambda expression.
+            return _countries.Select(country=>country.ToCountryResponse()).ToList();
+            // .ToList() converts the enumerable object into a list.
         }
+        #endregion
+
+        /// <summary>
+        /// Get country details based on the entered country GUID
+        /// </summary>
+        /// <param name="CountryID"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        #region Get Country by countryID
+        public CountryResponse? GetCountryByCountryID(Guid? CountryID)
+        {
+            // Receives the countryID checks with the corresponding countryID in the list of countries if there is a match
+            // returns that country object as a response, by converting the country object from Country type to CountryResponse type.
+            CountryResponse? result = null;
+            if (!CountryID.Equals(null)) {
+               Country? country_response_from_list = _countries.FirstOrDefault(country => country.CountryID == CountryID);
+                if (country_response_from_list != null) { 
+                    result = country_response_from_list.ToCountryResponse();
+                }
+            }
+            return result;
+        }
+        #endregion
     }
 }
