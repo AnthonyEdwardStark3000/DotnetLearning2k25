@@ -25,8 +25,8 @@ namespace ServiceContracts.DTO
             if (obj.GetType()!=typeof(CountryResponse)) {
                 return false;
             }
-            CountryResponse country_to_compare = obj as CountryResponse;
-            return (CountryID == country_to_compare.CountryID && CountryName== country_to_compare.CountryName);
+            CountryResponse? country_to_compare = obj as CountryResponse;
+            return (CountryID == country_to_compare?.CountryID && CountryName== country_to_compare.CountryName);
         }
 
         // Overriding Equals method demands to override GetHashCode method as well

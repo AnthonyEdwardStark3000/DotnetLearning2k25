@@ -32,7 +32,7 @@ namespace ServiceContracts.DTO
             PersonResponse person = (PersonResponse)obj;
             return PersonID == person.PersonID && PersonName == person.PersonName && Email == person.Email
                 && DateOfBirth == person.DateOfBirth && Gender == person.Gender
-                && CountryID == person.CountryID && Address == person.Address && ReceiveNewsLetters == person.ReceiveNewsLetters && Age == person.ReceiveNewsLetters;
+                && CountryID == person.CountryID && Address == person.Address && ReceiveNewsLetters == person.ReceiveNewsLetters && Age == person.Age;
         }
 
         public override int GetHashCode()
