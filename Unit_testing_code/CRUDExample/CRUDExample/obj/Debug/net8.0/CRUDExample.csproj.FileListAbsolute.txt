@@ -22,7 +22,6 @@ U:\Dotnet_2k25\Unit_testing_code\CRUDExample\CRUDExample\obj\Debug\net8.0\static
 U:\Dotnet_2k25\Unit_testing_code\CRUDExample\CRUDExample\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.CRUDExample.props
 U:\Dotnet_2k25\Unit_testing_code\CRUDExample\CRUDExample\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.CRUDExample.props
 U:\Dotnet_2k25\Unit_testing_code\CRUDExample\CRUDExample\obj\Debug\net8.0\staticwebassets.pack.json
-U:\Dotnet_2k25\Unit_testing_code\CRUDExample\CRUDExample\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 U:\Dotnet_2k25\Unit_testing_code\CRUDExample\CRUDExample\obj\Debug\net8.0\CRUDExample.dll
 U:\Dotnet_2k25\Unit_testing_code\CRUDExample\CRUDExample\obj\Debug\net8.0\refint\CRUDExample.dll
 U:\Dotnet_2k25\Unit_testing_code\CRUDExample\CRUDExample\obj\Debug\net8.0\CRUDExample.pdb

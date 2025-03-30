@@ -3,6 +3,7 @@ using Entities;
 using ServiceContracts.DTO;
 using ServiceContracts;
 using System.Text.RegularExpressions;
+using System.ComponentModel.DataAnnotations;
 
 namespace Services
 {
@@ -37,15 +38,27 @@ namespace Services
             if (personAddRequest == null)
                 throw new ArgumentNullException(nameof(personAddRequest));
 
-            if (String.IsNullOrEmpty(personAddRequest.PersonName))
-                throw new ArgumentException("PersonName Can't be blank");
+            // if (String.IsNullOrEmpty(personAddRequest.PersonName))
+            //     throw new ArgumentException("PersonName Can't be blank");
 
-            if (String.IsNullOrWhiteSpace(personAddRequest.Email))
-                throw new ArgumentException("Email Can't be blank");
+            // if (String.IsNullOrWhiteSpace(personAddRequest.Email))
+            //     throw new ArgumentException("Email Can't be blank");
 
-            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-            if(!Regex.IsMatch(personAddRequest.Email, pattern))
-                throw new ArgumentException("Email is not proper");
+            // string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            // if(!Regex.IsMatch(personAddRequest.Email, pattern))
+            //     throw new ArgumentException("Email is not proper");
+
+            // Model validations
+            ValidationContext validationContext = new ValidationContext(personAddRequest);
+            // Errors that happened during validation
+            List<ValidationResult> validationResults = new List<ValidationResult>();
+            // validate
+            bool isValid = Validator.TryValidateObject(personAddRequest, validationContext, validationResults, true);
+            if (!isValid)
+                throw new ArgumentException(validationResults.FirstOrDefault()?.ErrorMessage);
+
+            if (personAddRequest.DateOfBirth > DateTime.Now)
+                throw new ArgumentException("Date Of Birth cannot be greater than this day! .");
 
             // convert person add request into person type
             Person person = personAddRequest.ToPerson();
@@ -62,7 +75,14 @@ namespace Services
 
         public List<PersonResponse> GetAllPersons()
         {
-            throw new NotImplementedException();
+            List<Person> persons = _persons;
+
+            List<PersonResponse> final_response = new List<PersonResponse>();
+            foreach (Person p in persons)
+            {
+                final_response.Add(PersonExtensions.ToPersonResponse(p));
+            }
+            return final_response;
         }
     }
 }
