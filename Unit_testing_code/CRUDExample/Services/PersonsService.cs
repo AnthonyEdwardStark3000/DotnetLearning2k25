@@ -4,6 +4,7 @@ using ServiceContracts.DTO;
 using ServiceContracts;
 using System.Text.RegularExpressions;
 using System.ComponentModel.DataAnnotations;
+using Services.Helpers;
 
 namespace Services
 {
@@ -47,16 +48,9 @@ namespace Services
             // string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             // if(!Regex.IsMatch(personAddRequest.Email, pattern))
             //     throw new ArgumentException("Email is not proper");
-
-            // Model validations
-            ValidationContext validationContext = new ValidationContext(personAddRequest);
-            // Errors that happened during validation
-            List<ValidationResult> validationResults = new List<ValidationResult>();
-            // validate
-            bool isValid = Validator.TryValidateObject(personAddRequest, validationContext, validationResults, true);
-            if (!isValid)
-                throw new ArgumentException(validationResults.FirstOrDefault()?.ErrorMessage);
-
+            
+            // Model validation
+            ValidationHelper.ModelValidation(personAddRequest);
             if (personAddRequest.DateOfBirth > DateTime.Now)
                 throw new ArgumentException("Date Of Birth cannot be greater than this day! .");
 
