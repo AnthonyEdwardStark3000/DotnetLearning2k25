@@ -48,7 +48,7 @@ namespace Services
             // string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             // if(!Regex.IsMatch(personAddRequest.Email, pattern))
             //     throw new ArgumentException("Email is not proper");
-            
+
             // Model validation
             ValidationHelper.ModelValidation(personAddRequest);
             if (personAddRequest.DateOfBirth > DateTime.Now)
@@ -69,14 +69,24 @@ namespace Services
 
         public List<PersonResponse> GetAllPersons()
         {
-            List<Person> persons = _persons;
+            // List<Person> persons = _persons;
 
-            List<PersonResponse> final_response = new List<PersonResponse>();
-            foreach (Person p in persons)
-            {
-                final_response.Add(PersonExtensions.ToPersonResponse(p));
-            }
+            // foreach (Person p in persons)
+            // {
+            //     final_response.Add(PersonExtensions.ToPersonResponse(p));
+            // }
+            List<PersonResponse> final_response = _persons.Select(person => person.ToPersonResponse()).ToList();
             return final_response;
+        }
+
+        public PersonResponse GetPersonByPersonID(Guid? personID)
+        {
+            if (personID == null)
+                return null;
+            Person person = _persons.FirstOrDefault((person) => person.PersonID == personID);
+            if (person == null)
+                return null;
+            return person.ToPersonResponse();
         }
     }
 }
