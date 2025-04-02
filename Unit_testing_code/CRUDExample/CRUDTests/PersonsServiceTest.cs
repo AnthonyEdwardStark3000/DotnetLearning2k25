@@ -8,6 +8,7 @@ using ServiceContracts.Enums;
 using System.Reflection;
 using Entities;
 using System.Net;
+using Xunit.Abstractions;
 
 namespace CRUDTests
 {
@@ -16,12 +17,14 @@ namespace CRUDTests
         // Private fields
         private readonly IPersonsService _personService;
         private readonly ICountriesService _countriesService;
+        private readonly ITestOutputHelper _testOutputHelper;
 
         //Constructor
-        public PersonsServiceTest()
+        public PersonsServiceTest(ITestOutputHelper testOutputHelper)
         {
             _personService = new PersonsService();
             _countriesService = new CountriesService();
+            _testOutputHelper = testOutputHelper;
         }
 
         #region Add Person
@@ -171,11 +174,28 @@ namespace CRUDTests
             {
                 person_responses_from_add.Add(_personService.AddPerson(person));
             }
+
+            // Print person_response_list_from_add
+            _testOutputHelper.WriteLine("Expected : ");
+            foreach (PersonResponse person_response_from_add in person_responses_from_add)
+            {
+                // Override the ToString() method in PersonResponse
+                _testOutputHelper.WriteLine(person_response_from_add.ToString());
+            }
             List<PersonResponse> person_response_from_get = _personService.GetAllPersons();
+            _testOutputHelper.WriteLine("Actual : ");
+
+            // Print person_response_from_get_all
+            foreach (PersonResponse person_response in person_response_from_get)
+            {
+                // Override the ToString() method in PersonResponse
+                _testOutputHelper.WriteLine(person_response.ToString());
+            }
             // 3. Assert  
-            foreach(PersonResponse person_response in person_responses_from_add){
-            Assert.Contains(person_response, person_response_from_get);
-            }   
+            foreach (PersonResponse person_response in person_responses_from_add)
+            {
+                Assert.Contains(person_response, person_response_from_get);
+            }
         }
         #endregion
     }

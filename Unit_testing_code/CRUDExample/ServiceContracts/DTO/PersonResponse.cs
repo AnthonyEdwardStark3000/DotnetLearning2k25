@@ -39,7 +39,17 @@ namespace ServiceContracts.DTO
         {
             return base.GetHashCode();
         }
+
+        /// <summary>
+        /// Override this ToString() in PersonResponse Model class to print the values present in the Test class for this model instead of simply printing ServiceContracts.DTO.PersonResponse
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return $"Person ID:{PersonID} , PersonName: {PersonName}, Email:{Email}, \n DateOfBirth:{DateOfBirth}, Gender:{Gender}, CountryID:{CountryID}, \n Country:{Country}, Address:{Address}, ReceiveNewsLetters:{ReceiveNewsLetters}, Age:{Age} \n \n";
         }
+
+    }
 
 
     public static class PersonExtensions
