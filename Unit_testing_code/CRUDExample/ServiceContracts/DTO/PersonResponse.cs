@@ -46,7 +46,7 @@ namespace ServiceContracts.DTO
         /// <returns></returns>
         public override string ToString()
         {
-            return $"Person ID:{PersonID} , PersonName: {PersonName}, Email:{Email}, \n DateOfBirth:{DateOfBirth}, Gender:{Gender}, CountryID:{CountryID}, \n Country:{Country}, Address:{Address}, ReceiveNewsLetters:{ReceiveNewsLetters}, Age:{Age} \n \n";
+            return $"Person ID:{PersonID} , PersonName: {PersonName}, Email:{Email}, \n DateOfBirth:{DateOfBirth?.ToString("dd MMM yyyy")}, Gender:{Gender}, CountryID:{CountryID}, \n Country:{Country}, Address:{Address}, ReceiveNewsLetters:{ReceiveNewsLetters}, Age:{Age} \n \n";
         }
 
     }
