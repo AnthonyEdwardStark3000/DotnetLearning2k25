@@ -88,5 +88,38 @@ namespace Services
                 return null;
             return person.ToPersonResponse();
         }
+
+        // check if searchby is not null, Get matching persons from List<Person> based on given searchby and searchstring
+        // Convert the matching persons to PersonResponse type and return the list of PersonResponse
+        // if no matching persons found, return empty list 
+        public List<PersonResponse> GetFilteredPersons(string searchBy, string? searchString)
+        {
+            List<PersonResponse> allPersons = GetAllPersons();
+            List<PersonResponse> matchingPersons = allPersons;
+            if(String.IsNullOrEmpty(searchBy) || String.IsNullOrEmpty(searchString))
+             return matchingPersons;
+            switch(searchBy)
+            {
+                case nameof(Person.PersonName):
+                    matchingPersons = allPersons.Where(person => String.IsNullOrEmpty(person.PersonName)?true:person.PersonName.Contains(searchString,StringComparison.OrdinalIgnoreCase)).ToList();
+                    break;
+                case nameof(Person.Email):
+                    matchingPersons = allPersons.Where(person=> String.IsNullOrEmpty(person.Email)?true:person.Email.Contains(searchString,StringComparison.OrdinalIgnoreCase)).ToList();
+                    break;
+                case nameof(Person.DateOfBirth):
+                    matchingPersons = allPersons.Where(person=> !person.DateOfBirth.HasValue ?true:person.DateOfBirth.Value.ToString("yyyy-MM-dd").Contains(searchString,StringComparison.OrdinalIgnoreCase)).ToList();
+                    break;
+                case nameof(Person.Gender):
+                    matchingPersons = allPersons.Where(person=> String.IsNullOrEmpty(person.Gender)?true:person.Gender.StartsWith(searchString,StringComparison.OrdinalIgnoreCase)).ToList();
+                    break;
+                case nameof(Person.CountryID):
+                    matchingPersons = allPersons.Where(person=> !person.CountryID.HasValue?true:person.CountryID.Value.ToString().Contains(searchString,StringComparison.OrdinalIgnoreCase)).ToList();
+                    break;
+                default:
+                    matchingPersons = allPersons;
+                    break;
+            } 
+            return matchingPersons;    
+        }
     }
 }
