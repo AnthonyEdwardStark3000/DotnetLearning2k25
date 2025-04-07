@@ -296,5 +296,48 @@ namespace CRUDTests
             }
         }
         #endregion
+
+        #region Get sorted persons
+        // When we sort based on personsName in DESC , it should return persons list in descending order on peron Name
+        public void GetSortedPersons()
+        {
+            // 1. Arrange    
+            CountryAddRequest country_request_1 = new CountryAddRequest() { CountryName = "USA" };
+            CountryAddRequest country_request_2 = new CountryAddRequest() { CountryName = "India" };
+
+            CountryResponse country_response_1 = _countriesService.AddCountry(country_request_1);
+            CountryResponse country_response_2 = _countriesService.AddCountry(country_request_2);
+
+            PersonAddRequest person_request_1 = new PersonAddRequest() { PersonName = "Person1", Email = "Person1@gmail.com", Gender = GenderOptions.Male, Address = "person1Address", CountryID = country_response_1.CountryID, ReceiveNewsLetters = false, DateOfBirth = DateTime.Parse("2025-03-30") };
+
+            PersonAddRequest person_request_2 = new PersonAddRequest() { PersonName = "Person2", Email = "Person2@gmail.com", Gender = GenderOptions.Female, Address = "person2Address", CountryID = country_response_2.CountryID, ReceiveNewsLetters = true, DateOfBirth = DateTime.Parse("2025-01-12") };
+            // 2. Act
+            List<PersonAddRequest> person_requests = new List<PersonAddRequest>() { person_request_1, person_request_2 };
+            List<PersonResponse> person_responses_from_add = new List<PersonResponse>() { };
+            foreach (PersonAddRequest person in person_requests)
+            {
+                person_responses_from_add.Add(_personService.AddPerson(person));
+            }
+
+            // Print person_response_list_from_add
+            _testOutputHelper.WriteLine("Expected : ");
+            foreach (PersonResponse person_response_from_add in person_responses_from_add)
+            {
+                // Override the ToString() method in PersonResponse
+                _testOutputHelper.WriteLine(person_response_from_add.ToString());
+            }
+            List<PersonResponse> allPersons = _personService.GetAllPersons();
+            List<PersonResponse> person_response_from_sort = _personService.GetSortedPersons(allPersons, nameof(Person.PersonName), SortOrderOptions.ASC);
+            _testOutputHelper.WriteLine("Actual : ");
+            person_responses_from_add = person_responses_from_add.OrderByDescending(temp => temp.PersonName).ToList();
+
+            // 3. Assert  
+            for (int i = 0; i < person_responses_from_add.Count; i++)
+            {
+                Assert.Equal(person_responses_from_add[i], person_response_from_sort[i]);
+            }
+
+        }
+        #endregion
     }
 }
