@@ -392,6 +392,38 @@ namespace CRUDTests
                 // 3. Assert
                 () => _personService.UpdatePerson(person_update_request));
         }
+
+        // Add the new person and try to update the personName and Email
+        [Fact]
+        public void UpdatePerson_PersonFullDetails()
+        {
+            // 1. Arrange
+            CountryAddRequest country_add_request = new CountryAddRequest()
+            {
+                CountryName = "Sample"
+            };
+            CountryResponse country_response_from_add = _countriesService.AddCountry(country_add_request);
+
+            PersonAddRequest person_add_request = new PersonAddRequest()
+            {
+                PersonName = "John",
+                CountryID = country_response_from_add.CountryID,
+                Address = "Address",
+                Email = "Email",
+                DateOfBirth = DateTime.UtcNow,
+                Gender = GenderOptions.Male,
+                ReceiveNewsLetters = false
+            };
+            PersonResponse person_response_from_add = _personService.AddPerson(person_add_request);
+            personUpdateRequest? person_update_request = person_response_from_add.ToPersonUpdateRequest();
+            person_update_request.PersonName = "William";
+            person_update_request.Email = "William@gmail.com";
+            // 2. Act
+            PersonResponse person_response_from_update = _personService.UpdatePerson(person_update_request);
+            PersonResponse? person_response_from_get = _personService.GetPersonByPersonID(person_response_from_update.PersonID);
+            // 3. Assert
+            Assert.Equal(person_response_from_get, person_response_from_update);
+        }
         #endregion
     }
 }

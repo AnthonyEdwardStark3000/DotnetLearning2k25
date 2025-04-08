@@ -176,7 +176,8 @@ namespace Services
         {
             if (personUpdateRequest == null)
                 throw new ArgumentNullException();
-            return null;
+            if (_persons.Where((person) => person.PersonID == personUpdateRequest.PersonID).ToPersonResponse())
+                throw new ArgumentNullException();
         }
     }
 }
