@@ -39,7 +39,7 @@ namespace ServiceContracts
         /// <summary>
         public List<PersonResponse> GetFilteredPersons(string searchBy, string? searchString);
 
-        
+
         /// <summary>
         /// Returns sorted list of persons
         /// </summary>
@@ -49,5 +49,11 @@ namespace ServiceContracts
         /// <returns>Returns the List PersonResponse after sorting the persons</returns> 
         /// <summary>
         public List<PersonResponse> GetSortedPersons(List<PersonResponse> allPersons, string sortBy, SortOrderOptions sortOrder);
+
+        /// <summary>
+        /// Updates the specified Person details based on the PersonID provided.
+        /// </summary>
+        /// <returns>PersonResponse</returns>
+        public PersonResponse UpdatePerson(personUpdateRequest? personUpdateRequest);
     }
 }

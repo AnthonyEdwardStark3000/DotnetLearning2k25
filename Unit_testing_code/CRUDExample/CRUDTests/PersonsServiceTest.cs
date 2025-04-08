@@ -339,5 +339,59 @@ namespace CRUDTests
 
         }
         #endregion
+
+        #region UpdatePerson
+        // when we supply null as PersonUpdateRequest, it should throw Argument null exception
+        [Fact]
+        public void UpdatePerson_NullPerson()
+        {
+            // 1. Arrange
+            personUpdateRequest? personUpdateRequest = null;
+            // 2. Act
+            Assert.Throws<ArgumentNullException>(
+            // 3. Assert
+                () => _personService.UpdatePerson(personUpdateRequest));
+        }
+
+        // When the person ID is invalid it should throw argument exception
+        [Fact]
+        public void UpdatePerson_InvalidPersonID()
+        {
+            // 1. Arrange
+            personUpdateRequest? personUpdateRequest = new personUpdateRequest()
+            {
+                PersonID = new Guid()
+            };
+            // 2. Act
+            Assert.Throws<ArgumentException>(
+            // 3. Assert
+                () => _personService.UpdatePerson(personUpdateRequest));
+        }
+
+        // When the person Name is null it should throw argument exception
+        [Fact]
+        public void UpdatePerson_NullPersonName()
+        {
+            // 1. Arrange
+            CountryAddRequest country_add_request = new CountryAddRequest()
+            {
+                CountryName = "Sample"
+            };
+            CountryResponse country_response_from_add = _countriesService.AddCountry(country_add_request);
+
+            PersonAddRequest person_add_request = new PersonAddRequest()
+            {
+                PersonName = "John",
+                CountryID = country_response_from_add.CountryID
+            };
+            PersonResponse person_response_from_add = _personService.AddPerson(person_add_request);
+            personUpdateRequest? person_update_request = person_response_from_add.ToPersonUpdateRequest();
+            person_update_request.PersonName = null;
+            // 2. Act
+            Assert.Throws<ArgumentException>(
+                // 3. Assert
+                () => _personService.UpdatePerson(person_update_request));
+        }
+        #endregion
     }
 }
