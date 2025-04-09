@@ -382,7 +382,8 @@ namespace CRUDTests
             PersonAddRequest person_add_request = new PersonAddRequest()
             {
                 PersonName = "John",
-                CountryID = country_response_from_add.CountryID
+                CountryID = country_response_from_add.CountryID,
+                Email = "check@gmail.com"
             };
             PersonResponse person_response_from_add = _personService.AddPerson(person_add_request);
             personUpdateRequest? person_update_request = person_response_from_add.ToPersonUpdateRequest();
@@ -409,7 +410,7 @@ namespace CRUDTests
                 PersonName = "John",
                 CountryID = country_response_from_add.CountryID,
                 Address = "Address",
-                Email = "Email",
+                Email = "Email@gmail.com",
                 DateOfBirth = DateTime.UtcNow,
                 Gender = GenderOptions.Male,
                 ReceiveNewsLetters = false
