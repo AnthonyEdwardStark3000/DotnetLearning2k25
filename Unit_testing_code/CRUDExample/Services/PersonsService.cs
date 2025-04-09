@@ -179,24 +179,30 @@ namespace Services
             // validation 
             ValidationHelper.ModelValidation(personUpdateRequest);
             // Get matching person Object to update
-            Person? matchingPerson = _persons.FirstOrDefault(temp=>temp.PersonID == personUpdateRequest.PersonID);
-            if(matchingPerson==null)
+            Person? matchingPerson = _persons.FirstOrDefault(temp => temp.PersonID == personUpdateRequest.PersonID);
+            if (matchingPerson == null)
                 throw new ArgumentException("Given person ID doesn't exist");
             // Update details 
-            matchingPerson.PersonName = personUpdateRequest.PersonName;   
-            matchingPerson.CountryID = personUpdateRequest.CountryID;   
-            matchingPerson.DateOfBirth = personUpdateRequest.DateOfBirth;   
-            matchingPerson.Email = personUpdateRequest.Email;   
-            matchingPerson.Gender = personUpdateRequest.Gender.ToString();   
-            matchingPerson.Address = personUpdateRequest.Address;   
-            matchingPerson.ReceiveNewsLetters = personUpdateRequest.ReceiveNewsLetters;   
+            matchingPerson.PersonName = personUpdateRequest.PersonName;
+            matchingPerson.CountryID = personUpdateRequest.CountryID;
+            matchingPerson.DateOfBirth = personUpdateRequest.DateOfBirth;
+            matchingPerson.Email = personUpdateRequest.Email;
+            matchingPerson.Gender = personUpdateRequest.Gender.ToString();
+            matchingPerson.Address = personUpdateRequest.Address;
+            matchingPerson.ReceiveNewsLetters = personUpdateRequest.ReceiveNewsLetters;
 
             return matchingPerson.ToPersonResponse();
         }
 
         public bool DeletePerson(Guid? personID)
         {
-            throw new NotImplementedException();
+            if (personID == null)
+                throw new ArgumentNullException(nameof(personID));
+            Person? found_person = _persons.FirstOrDefault(person => person.PersonID == personID);
+            if (found_person == null)
+                return false;
+            _persons.RemoveAll(person => person.PersonID == found_person.PersonID);
+            return true;
         }
     }
 }
