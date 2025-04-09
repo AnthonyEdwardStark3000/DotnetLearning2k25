@@ -55,5 +55,11 @@ namespace ServiceContracts
         /// </summary>
         /// <returns>PersonResponse</returns>
         public PersonResponse UpdatePerson(personUpdateRequest? personUpdateRequest);
+
+        /// <summary>
+        /// Deletes the specified Person details based on the PersonID provided.
+        /// </summary>
+        /// <returns>True if the deletion is successful otherwise false</returns>
+        public Boolean DeletePerson(Guid? personID);
     }
 }
