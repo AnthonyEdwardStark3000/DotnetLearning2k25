@@ -1,0 +1,6 @@
+@Mutex_HostAddress = http://localhost:5090
+
+GET {{Mutex_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

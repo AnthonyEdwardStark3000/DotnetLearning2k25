@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ZRgZnJuZBMexGyfug6THB8cMSbRNkd+vgm7OuK7l5fU=",
+  "Source": "Mutex",
+  "BasePath": "_content/Mutex",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
