@@ -5568,11 +5568,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\CRUDTests\\CRUDTests.csproj",
+      "projectUniqueName": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\CRUDTests\\CRUDTests.csproj",
       "projectName": "CRUDTests",
-      "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\CRUDTests\\CRUDTests.csproj",
+      "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\CRUDTests\\CRUDTests.csproj",
       "packagesPath": "C:\\Users\\JARVIS\\.nuget\\packages\\",
-      "outputPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\CRUDTests\\obj\\",
+      "outputPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\CRUDTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5593,14 +5593,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Entities\\Entities.csproj": {
-              "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Entities\\Entities.csproj"
+            "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Entities\\Entities.csproj": {
+              "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Entities\\Entities.csproj"
             },
-            "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\ServiceContracts\\ServiceContracts.csproj": {
-              "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\ServiceContracts\\ServiceContracts.csproj"
+            "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\ServiceContracts\\ServiceContracts.csproj": {
+              "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\ServiceContracts\\ServiceContracts.csproj"
             },
-            "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Services\\Services.csproj": {
-              "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Services\\Services.csproj"
+            "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\Services.csproj": {
+              "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\Services.csproj"
             }
           }
         }

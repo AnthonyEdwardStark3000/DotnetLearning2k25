@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eYZdP0+CqZA=",
+  "dgSpecHash": "qxAHop4LBKs=",
   "success": true,
-  "projectFilePath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\CRUDTests\\CRUDTests.csproj",
+  "projectFilePath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\CRUDTests\\CRUDTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JARVIS\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\JARVIS\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",

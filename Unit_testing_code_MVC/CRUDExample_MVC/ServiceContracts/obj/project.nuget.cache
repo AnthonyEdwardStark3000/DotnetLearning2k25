@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ralsr1CI9UI=",
+  "dgSpecHash": "g4a+xIZbed0=",
   "success": true,
-  "projectFilePath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\ServiceContracts\\ServiceContracts.csproj",
+  "projectFilePath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\ServiceContracts\\ServiceContracts.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

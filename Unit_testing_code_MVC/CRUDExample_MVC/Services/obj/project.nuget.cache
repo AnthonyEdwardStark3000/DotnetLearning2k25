@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WCv0MbVLwaM=",
+  "dgSpecHash": "rEXhsUaQqGk=",
   "success": true,
-  "projectFilePath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Services\\Services.csproj",
+  "projectFilePath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\Services.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

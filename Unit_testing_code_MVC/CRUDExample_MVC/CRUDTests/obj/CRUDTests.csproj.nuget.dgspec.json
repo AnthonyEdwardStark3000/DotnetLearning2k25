@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\CRUDTests\\CRUDTests.csproj": {}
+    "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\CRUDTests\\CRUDTests.csproj": {}
   },
   "projects": {
-    "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\CRUDTests\\CRUDTests.csproj": {
+    "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\CRUDTests\\CRUDTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\CRUDTests\\CRUDTests.csproj",
+        "projectUniqueName": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\CRUDTests\\CRUDTests.csproj",
         "projectName": "CRUDTests",
-        "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\CRUDTests\\CRUDTests.csproj",
+        "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\CRUDTests\\CRUDTests.csproj",
         "packagesPath": "C:\\Users\\JARVIS\\.nuget\\packages\\",
-        "outputPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\CRUDTests\\obj\\",
+        "outputPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\CRUDTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,14 +32,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Entities\\Entities.csproj": {
-                "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Entities\\Entities.csproj"
+              "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Entities\\Entities.csproj": {
+                "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Entities\\Entities.csproj"
               },
-              "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\ServiceContracts\\ServiceContracts.csproj": {
-                "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\ServiceContracts\\ServiceContracts.csproj"
+              "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\ServiceContracts\\ServiceContracts.csproj": {
+                "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\ServiceContracts\\ServiceContracts.csproj"
               },
-              "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Services\\Services.csproj": {
-                "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Services\\Services.csproj"
+              "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\Services.csproj": {
+                "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\Services.csproj"
               }
             }
           }
@@ -97,14 +97,14 @@
         }
       }
     },
-    "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Entities\\Entities.csproj": {
+    "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Entities\\Entities.csproj",
+        "projectUniqueName": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Entities\\Entities.csproj",
+        "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\JARVIS\\.nuget\\packages\\",
-        "outputPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Entities\\obj\\",
+        "outputPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -162,14 +162,14 @@
         }
       }
     },
-    "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\ServiceContracts\\ServiceContracts.csproj": {
+    "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\ServiceContracts\\ServiceContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\ServiceContracts\\ServiceContracts.csproj",
+        "projectUniqueName": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\ServiceContracts\\ServiceContracts.csproj",
         "projectName": "ServiceContracts",
-        "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\ServiceContracts\\ServiceContracts.csproj",
+        "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\ServiceContracts\\ServiceContracts.csproj",
         "packagesPath": "C:\\Users\\JARVIS\\.nuget\\packages\\",
-        "outputPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\ServiceContracts\\obj\\",
+        "outputPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\ServiceContracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -190,8 +190,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Entities\\Entities.csproj": {
-                "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Entities\\Entities.csproj"
+              "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Entities\\Entities.csproj": {
+                "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Entities\\Entities.csproj"
               }
             }
           }
@@ -231,14 +231,14 @@
         }
       }
     },
-    "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Services\\Services.csproj": {
+    "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Services\\Services.csproj",
+        "projectUniqueName": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Services\\Services.csproj",
+        "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\JARVIS\\.nuget\\packages\\",
-        "outputPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\Services\\obj\\",
+        "outputPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -259,8 +259,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\ServiceContracts\\ServiceContracts.csproj": {
-                "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code\\CRUDExample\\ServiceContracts\\ServiceContracts.csproj"
+              "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\ServiceContracts\\ServiceContracts.csproj": {
+                "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\ServiceContracts\\ServiceContracts.csproj"
               }
             }
           }
