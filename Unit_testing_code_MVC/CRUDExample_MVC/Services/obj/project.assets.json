@@ -51,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "u:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\Services.csproj",
+      "projectUniqueName": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "u:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\Services.csproj",
+      "projectPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\JARVIS\\.nuget\\packages\\",
-      "outputPath": "u:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\obj\\",
+      "outputPath": "U:\\Dotnet_2k25\\Unit_testing_code_MVC\\CRUDExample_MVC\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

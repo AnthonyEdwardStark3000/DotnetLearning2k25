@@ -1,0 +1,18 @@
+# Stage 1
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY . .
+# Restore and publish the main project, which includes referenced projects
+WORKDIR /src/CRUDExample_MVC/CRUDExample
+RUN dotnet publish CRUDExample.csproj -c Release -o /published /p:UseAppHost=false
+
+# Stage 2
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+# working directory
+WORKDIR /app
+# what file to be copied
+# COPY published/ ./
+COPY --from=build /published .
+
+# what file to be run from the copied file
+ENTRYPOINT ["dotnet","CRUDExample.dll"]

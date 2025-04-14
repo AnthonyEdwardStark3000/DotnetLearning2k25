@@ -1,0 +1,16 @@
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\bin\Release\net8.0\ServiceContracts.deps.json
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\bin\Release\net8.0\ServiceContracts.dll
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\bin\Release\net8.0\ServiceContracts.pdb
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\bin\Release\net8.0\Entities.dll
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\bin\Release\net8.0\Entities.pdb
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\obj\Release\net8.0\ServiceContracts.csproj.AssemblyReference.cache
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\obj\Release\net8.0\ServiceContracts.GeneratedMSBuildEditorConfig.editorconfig
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\obj\Release\net8.0\ServiceContracts.AssemblyInfoInputs.cache
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\obj\Release\net8.0\ServiceContracts.AssemblyInfo.cs
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\obj\Release\net8.0\ServiceContracts.csproj.CoreCompileInputs.cache
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\obj\Release\net8.0\ServiceContracts.sourcelink.json
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\obj\Release\net8.0\ServiceC.04662A29.Up2Date
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\obj\Release\net8.0\ServiceContracts.dll
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\obj\Release\net8.0\refint\ServiceContracts.dll
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\obj\Release\net8.0\ServiceContracts.pdb
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\ServiceContracts\obj\Release\net8.0\ref\ServiceContracts.dll
