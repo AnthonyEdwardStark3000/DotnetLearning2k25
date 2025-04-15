@@ -1,34 +1,55 @@
-@model IEnumerable<PersonResponse> 
+@model IEnumerable<PersonResponse>
 @{
     ViewBag.Title = "Persons";
 }
 
-<p>Persons</p>    
-<table class="table">
-    <thead>
-        <tr>
-            <th>Person Name</th>
-            <th>Email</th>
-            <th>Date Of Birth</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Country</th>
-            <th>Address</th>
-            <th>Receive News Letters</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(PersonResponse person in Model){
+<form action="~/persons/index" method="get">
+    <p>Persons</p>
+    <div class="box flex">
+        <div class="flex-1">
+            <select name="searchBy" id="" class="form-input">
+                @foreach (var field in ViewBag.SearchFields)
+                {
+                    <option value="@field.Key">@field.Value</option>
+                }
+                @* searchBy=personName&searchString=abc *@
+            </select>
+        </div>
+        <div class="flex-1">
+            <input type="search" name="searchString" id="" placeholder="search">
+        </div>
+        <div class="flex-1">
+            <button class="button button-blue-back">Search</button>
+            <a href="~/persons/index" class="link-hover">Clear all</a>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
             <tr>
-                <td>@person.PersonName</td>
-                <td>@person.Email</td>
-                <td>@person.DateOfBirth</td>
-                <td>@person.Age</td>
-                <td>@person.Gender</td>
-                <td>@person.Country</td>
-                <td>@person.Address</td>
-                <td>@person.ReceiveNewsLetters</td>
+                <th>Person Name</th>
+                <th>Email</th>
+                <th>Date Of Birth</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Country</th>
+                <th>Address</th>
+                <th>Receive News Letters</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (PersonResponse person in Model)
+            {
+                <tr>
+                    <td>@person.PersonName</td>
+                    <td>@person.Email</td>
+                    <td>@person.DateOfBirth</td>
+                    <td>@person.Age</td>
+                    <td>@person.Gender</td>
+                    <td>@person.Country</td>
+                    <td>@person.Address</td>
+                    <td>@person.ReceiveNewsLetters</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>

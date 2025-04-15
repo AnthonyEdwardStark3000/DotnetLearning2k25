@@ -223,19 +223,19 @@ namespace Services
                 return matchingPersons;
             switch (searchBy)
             {
-                case nameof(Person.PersonName):
+                case nameof(PersonResponse.PersonName):
                     matchingPersons = allPersons.Where(person => String.IsNullOrEmpty(person.PersonName) ? true : person.PersonName.Contains(searchString, StringComparison.OrdinalIgnoreCase)).ToList();
                     break;
-                case nameof(Person.Email):
+                case nameof(PersonResponse.Email):
                     matchingPersons = allPersons.Where(person => String.IsNullOrEmpty(person.Email) ? true : person.Email.Contains(searchString, StringComparison.OrdinalIgnoreCase)).ToList();
                     break;
-                case nameof(Person.DateOfBirth):
+                case nameof(PersonResponse.DateOfBirth):
                     matchingPersons = allPersons.Where(person => !person.DateOfBirth.HasValue ? true : person.DateOfBirth.Value.ToString("yyyy-MM-dd").Contains(searchString, StringComparison.OrdinalIgnoreCase)).ToList();
                     break;
-                case nameof(Person.Gender):
+                case nameof(PersonResponse.Gender):
                     matchingPersons = allPersons.Where(person => String.IsNullOrEmpty(person.Gender) ? true : person.Gender.StartsWith(searchString, StringComparison.OrdinalIgnoreCase)).ToList();
                     break;
-                case nameof(Person.CountryID):
+                case nameof(PersonResponse.CountryID):
                     matchingPersons = allPersons.Where(person => !person.CountryID.HasValue ? true : person.CountryID.Value.ToString().Contains(searchString, StringComparison.OrdinalIgnoreCase)).ToList();
                     break;
                 default:
