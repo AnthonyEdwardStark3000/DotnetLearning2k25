@@ -10,13 +10,18 @@
             <select name="searchBy" id="" class="form-input">
                 @foreach (var field in ViewBag.SearchFields)
                 {
-                    <option value="@field.Key">@field.Value</option>
+                    if (field.Key == @ViewBag.CurrentSearchBy)
+                    {
+                        <option value="@field.Key" selected="selected">@field.Value</option>
+                    }else{
+                        <option value="@field.Key">@field.Value</option>
+                    }
                 }
                 @* searchBy=personName&searchString=abc *@
             </select>
         </div>
         <div class="flex-1">
-            <input type="search" name="searchString" id="" placeholder="search">
+            <input type="search" name="searchString" value="@ViewBag.CurrentSearchString" placeholder="search">
         </div>
         <div class="flex-1">
             <button class="button button-blue-back">Search</button>

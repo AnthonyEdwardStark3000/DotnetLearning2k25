@@ -27,6 +27,8 @@ namespace CRUDExample.Controllers
                 {nameof(PersonResponse.Address),"Address"},
             };
             List<PersonResponse> persons = _personsService.GetFilteredPersons(searchBy,searchString);
+            ViewBag.CurrentSearchBy = searchBy;
+            ViewBag.CurrentSearchString = searchString;
             return View(persons); // calling Views/ Persons/ Index.cshtml
         }
     }
