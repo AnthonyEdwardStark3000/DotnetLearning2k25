@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ServiceContracts;
 using ServiceContracts.DTO;
+using ServiceContracts.Enums;
 
 namespace CRUDExample.Controllers
 {
@@ -16,20 +17,27 @@ namespace CRUDExample.Controllers
         }
         [Route("persons/index")]
         [Route("/")]
-        public IActionResult Index(string searchBy,string? searchString)
+        public IActionResult Index(string searchBy, string? searchString, string sortBy = nameof(PersonResponse.PersonName), SortOrderOptions sortOrder = SortOrderOptions.ASC)
         {
-            ViewBag.SearchFields = new Dictionary<String,String>(){
+            // Searching
+            ViewBag.SearchFields = new Dictionary<String, String>(){
                 {nameof(PersonResponse.PersonName),"Person Name"},
                 {nameof(PersonResponse.Email),"Email"},
                 {nameof(PersonResponse.DateOfBirth),"Date Of Birth"},
+                {nameof(PersonResponse.Age),"Age"},
                 {nameof(PersonResponse.Gender),"Gender"},
                 {nameof(PersonResponse.CountryID),"Country ID"},
                 {nameof(PersonResponse.Address),"Address"},
             };
-            List<PersonResponse> persons = _personsService.GetFilteredPersons(searchBy,searchString);
+            List<PersonResponse> persons = _personsService.GetFilteredPersons(searchBy, searchString);
             ViewBag.CurrentSearchBy = searchBy;
             ViewBag.CurrentSearchString = searchString;
-            return View(persons); // calling Views/ Persons/ Index.cshtml
+
+            // Sorting
+             List<PersonResponse> sorted_persons = _personsService.GetSortedPersons(persons,sortBy,sortOrder);
+            ViewBag.CurrentSortBy = sortBy;
+            ViewBag.CurrentSortOrder = sortOrder;
+            return View(sorted_persons); // calling Views/ Persons/ Index.cshtml
         }
     }
 }

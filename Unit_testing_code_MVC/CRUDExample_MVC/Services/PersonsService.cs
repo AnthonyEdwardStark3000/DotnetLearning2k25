@@ -125,7 +125,8 @@ namespace Services
                         PersonID = Guid.Parse("4937EAFE-14B1-4A91-9FCA-0CA1D0F8BF74"),
                         PersonName = "Edgard",
                         Email = "edomleo8@tripadvisor.com",
-                        DateOfBirth = DateTime.UtcNow,                        Gender = GenderOptions.Male.ToString(),
+                        DateOfBirth = DateTime.UtcNow,
+                        Gender = GenderOptions.Male.ToString(),
                         CountryID = Guid.Parse("8407A45E-A085-4208-B6ED-0E1F9BD1529A"),
                         Address = "Apt 381",
                         ReceiveNewsLetters = true
@@ -136,7 +137,8 @@ namespace Services
                         PersonID = Guid.Parse("B3E679CD-15CA-4618-BE5E-0400E89BB10D"),
                         PersonName = "Isidore",
                         Email = "iickovici9@virginia.edu",
-                        DateOfBirth = DateTime.UtcNow,                        Gender = GenderOptions.Male.ToString(),
+                        DateOfBirth = DateTime.UtcNow,
+                        Gender = GenderOptions.Male.ToString(),
                         CountryID = Guid.Parse("BFA5A16D-9D4E-48A4-B141-5E83B8DA6D9C"),
                         Address = "Suite 73",
                         ReceiveNewsLetters = false

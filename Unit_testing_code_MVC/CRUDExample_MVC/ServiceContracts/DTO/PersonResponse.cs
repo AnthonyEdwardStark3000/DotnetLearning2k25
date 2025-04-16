@@ -74,7 +74,6 @@ namespace ServiceContracts.DTO
 
     public static class PersonExtensions
     {
-
         // Extension method for person class
         /// <summary>
         /// Extension method to convert Person object to PersonResponse object
