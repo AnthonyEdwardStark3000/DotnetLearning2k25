@@ -19,7 +19,7 @@ namespace Services
         public PersonsService(bool initialize = true)
         {
             _persons = new List<Person>();
-            _countriesService = new CountriesService(false);
+            _countriesService = new CountriesService(true);
             if (initialize)
             {
                 _persons.Add(
@@ -237,8 +237,8 @@ namespace Services
                 case nameof(PersonResponse.Gender):
                     matchingPersons = allPersons.Where(person => String.IsNullOrEmpty(person.Gender) ? true : person.Gender.Equals(searchString, StringComparison.OrdinalIgnoreCase)).ToList();
                     break;
-                case nameof(PersonResponse.CountryID):
-                    matchingPersons = allPersons.Where(person => !person.CountryID.HasValue ? true : person.CountryID.Value.ToString().Contains(searchString, StringComparison.OrdinalIgnoreCase)).ToList();
+                case nameof(PersonResponse.Country):
+                    matchingPersons = allPersons.Where(person => String.IsNullOrEmpty(person.Country) ? true : person.Country.Contains(searchString, StringComparison.OrdinalIgnoreCase)).ToList();
                     break;
                 default:
                     matchingPersons = allPersons;
