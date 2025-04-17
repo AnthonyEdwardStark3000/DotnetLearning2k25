@@ -200,7 +200,7 @@ namespace Services
             // {
             //     final_response.Add(PersonExtensions.ToPersonResponse(p));
             // }
-            List<PersonResponse> final_response = _persons.Select(person => person.ToPersonResponse()).ToList();
+            List<PersonResponse> final_response = _persons.Select(person => ConvertPersonToPersonResponse(person)).ToList();
             return final_response;
         }
 
@@ -211,7 +211,7 @@ namespace Services
             Person person = _persons.FirstOrDefault((person) => person.PersonID == personID);
             if (person == null)
                 return null;
-            return person.ToPersonResponse();
+            return ConvertPersonToPersonResponse(person);
         }
 
         // check if searchby is not null, Get matching persons from List<Person> based on given searchby and searchstring
@@ -315,7 +315,7 @@ namespace Services
             matchingPerson.Address = personUpdateRequest.Address;
             matchingPerson.ReceiveNewsLetters = personUpdateRequest.ReceiveNewsLetters;
 
-            return matchingPerson.ToPersonResponse();
+            return ConvertPersonToPersonResponse(matchingPerson);
         }
 
         public bool DeletePerson(Guid? personID)

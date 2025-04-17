@@ -1,7 +1,6 @@
 @model IEnumerable<PersonResponse>
 @{
     ViewBag.Title = "Persons";
-    ViewBag.SortOrder = @ViewBag.CurrentSortOrder;
 }
 
 <form action="~/persons/index" method="get">
@@ -33,72 +32,65 @@
     </div>
     <table class="table">
         <thead>
-            @if (ViewBag.SortOrder.ToString() == SortOrderOptions.ASC.ToString())
-            {
-                ViewBag.SortOrder = SortOrderOptions.DESC;
-            }
-            else
-            {
-                ViewBag.SortOrder = SortOrderOptions.ASC;
-            }
             <tr>
-                <th>
-                    <a
-                        href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.PersonName)&sortOrder=@ViewBag.SortOrder">Person
-                        Name</a>
-                    <i class="fas fa-sort-up"></i>
-                </th>
-                <th>
-                    <a
-                        href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.Email)&sortOrder=@ViewBag.SortOrder">Email</a>
-                    <i class="fas fa-sort-up"></i>
-                </th>
-                <th>
-                    <a
-                        href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.DateOfBirth)&sortOrder=@ViewBag.SortOrder">Date
-                        Of Birth</a>
-                    <i class="fa-solid fa-sort-up"></i>
-                </th>
-                <th>
-                    <a
-                        href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.Age)&sortOrder=@ViewBag.SortOrder">Age</a>
-                    <i class="fas fa-sort-up"></i>
-                </th>
-                <th>
-                    <a
-                        href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.Gender)&sortOrder=@ViewBag.SortOrder">Gender</a>
-                    <i class="fas fa-sort-up"></i>
-                </th>
-                <th>
-                    <a
-                        href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.CountryID)&sortOrder=@ViewBag.SortOrder">Country</a>
-                    <i class="fas fa-sort-up"></i>
-                </th>
-                <th>
-                    <a
-                        href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.Address)&sortOrder=@ViewBag.SortOrder">Address</a>
-                    <i class="fas fa-sort-up"></i>
-                </th>
-                <th>
-                    <a
-                        href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.ReceiveNewsLetters)&sortOrder=@ViewBag.SortOrder">Receive
-                        News Letters</a>
-                    <i class="fas fa-sort-up"></i>
-                </th>
+                @* Invoking partial view for displaying person Name*@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                { "ColumnName",nameof(PersonResponse.PersonName)},
+                                { "DisplayName","Person Name"}
+                                })
+
+                @* Invoking partial view for displaying person Email*@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.Email)},
+                                { "DisplayName","Email"}
+                                })
+                @* Invoking partial view for displaying person Date Of Birth *@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.DateOfBirth)},
+                                { "DisplayName","Date Of Birth"}
+                                })
+
+                @* Invoking partial view for displaying person Age *@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.Age)},
+                                { "DisplayName","Age"}
+                                })
+
+                @* Invoking partial view for displaying person Gender *@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.Gender)},
+                                { "DisplayName","Gender"}
+                                })
+
+                @* Invoking partial view for displaying person country *@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.Country)},
+                                { "DisplayName","Country"}
+                                })
+                @* Invoking partial view for displaying person address *@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.Address)},
+                                { "DisplayName","Address"}
+                                })
+                @* Invoking partial view for displaying person Receive News Letters *@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.ReceiveNewsLetters)},
+                                { "DisplayName","Receive News Letters"}
+                                })
             </tr>
         </thead>
         <tbody>
             @foreach (PersonResponse person in Model)
             {
                 <tr>
-                    <td>@person.PersonName</td>
-                    <td>@person.Email</td>
-                    <td>@person.DateOfBirth</td>
-                    <td>@person.Age</td>
-                    <td>@person.Gender </td>
-                    <td>@person.CountryID</td>
-                    <td>@person.Address</td>
-                    <td>@person.ReceiveNewsLetters</td>
+                    <td style="width:8%">@person.PersonName</td>
+                    <td style="width:7%">@person.Email</td>
+                    <td style="width:10%">@person.DateOfBirth</td>
+                    <td style="width:2%">@person.Age</td>
+                    <td style="width:5%">@person.Gender </td>
+                    <td style="width:10%">@person.Country</td>
+                    <td style="width:15%">@person.Address</td>
+                    <td style="width:3%">@person.ReceiveNewsLetters</td>
                 </tr>
             }
         </tbody>
