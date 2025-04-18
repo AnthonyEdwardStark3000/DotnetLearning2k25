@@ -1,0 +1,70 @@
+@{
+    ViewBag.Title = "Create Person";
+}
+<a href="~/persons/index">Back to persons List</a>
+<h2>@ViewBag.Title</h2>
+<div class="w-50">
+    <form action="~/persons/create" method="get">
+        @* Person Name *@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label for="PersonName">Person Name</label>
+            </div>
+            <div class="flex-1">
+                <input type="text" id="PersonName" name="PersonName" placeholder="Enter the Person Name" />
+            </div>
+        </div>
+
+        @* Email *@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label for="Email">Email</label>
+            </div>
+            <div class="flex-1">
+                <input type="email" id="Email" name="Email" placeholder="Enter the Email" />
+            </div>
+        </div>
+
+        @* Date Of Birth *@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label for="DateOfBirth">Date Of Birth</label>
+            </div>
+            <div class="flex-1">
+                <input type="Date" id="DateOfBirth" name="DateOfBirth" />
+            </div>
+        </div>
+
+        @* Gender *@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label for="Gender">Gender</label>
+            </div>
+            <div class="flex-1">
+                <input type="radio" id="Gender" value="Male" name="Gender" />
+                <label for="Male">Male</label>
+                <input type="radio" id="Gender" value="Female" name="Gender" />
+                <label for="Female">Female</label>
+                <input type="radio" id="Gender" value="Others" name="Gender" />
+                <label for="Others">Others</label>
+            </div>
+        </div>
+
+        @* Country *@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label for="CountryID">Country</label>
+            </div>
+            <div class="flex-1">
+                <select name="CountryID">
+                    <option value="">Please select</option>
+                    @foreach(CountryResponse country in ViewBag.countries)
+                    {
+                        <option value="@country.CountryID">@country.CountryName</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+    </form>
+</div>

@@ -5,6 +5,7 @@
 
 <form action="~/persons/index" method="get">
     <p>Persons</p>
+    <a href="~/persons/create">Create a Person</a>
     <div class="box flex">
         <div class="flex-1">
             <select name="searchBy" id="" class="form-input">
@@ -88,9 +89,9 @@
                     <td style="width:10%">@person.DateOfBirth</td>
                     <td style="width:2%">@person.Age</td>
                     <td style="width:5%">@person.Gender </td>
-                    <td style="width:10%">@person.Country</td>
-                    <td style="width:15%">@person.Address</td>
-                    <td style="width:3%">@person.ReceiveNewsLetters</td>
+                    <td style="width:7%">@person.Country</td>
+                    <td style="width:12%">@person.Address</td>
+                    <td style="width:6%">@person.ReceiveNewsLetters</td>
                 </tr>
             }
         </tbody>
