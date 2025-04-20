@@ -51,5 +51,24 @@ namespace CRUDExample.Controllers
             ViewBag.Countries = countries;
             return View();
         }
+
+        // Executes when the user clicks on "Create Person" hyperlink (while opening the create view)
+        [Route("persons/create")]
+        [HttpPost]
+        public IActionResult Create(PersonAddRequest personAddRequest)
+        {
+            // Check the error in Model binding
+            if (!ModelState.IsValid)
+            {
+                List<CountryResponse> countries = _countriesService.GetAllCountries();
+                ViewBag.Countries = countries;
+
+                ViewBag.Errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+                return View();
+            }
+            PersonResponse personResponse = _personsService.AddPerson(personAddRequest);
+            // Navigate to Index() action method , It makes another get request to "persons/index"
+            return RedirectToAction("Index", "Persons");
+        }
     }
 }
