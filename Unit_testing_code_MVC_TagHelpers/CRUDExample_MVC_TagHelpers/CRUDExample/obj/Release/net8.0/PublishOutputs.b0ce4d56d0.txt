@@ -1,0 +1,13 @@
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\CRUDExample\publish\CRUDExample.exe
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\CRUDExample\publish\appsettings.Development.json
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\CRUDExample\publish\appsettings.json
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\CRUDExample\publish\CRUDExample.dll
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\CRUDExample\publish\CRUDExample.deps.json
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\CRUDExample\publish\CRUDExample.runtimeconfig.json
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\CRUDExample\publish\CRUDExample.pdb
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\CRUDExample\publish\Entities.dll
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\CRUDExample\publish\ServiceContracts.dll
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\CRUDExample\publish\Services.dll
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\CRUDExample\publish\ServiceContracts.pdb
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\CRUDExample\publish\Services.pdb
+U:\Dotnet_2k25\Unit_testing_code_MVC\CRUDExample_MVC\CRUDExample\publish\Entities.pdb

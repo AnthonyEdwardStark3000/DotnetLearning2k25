@@ -1,0 +1,99 @@
+@model IEnumerable<PersonResponse>
+@{
+    ViewBag.Title = "Persons";
+}
+
+<form asp-controller="Persons" asp-action="Index" method="get">
+    <p>Persons</p>
+    <a asp-controller="Persons" asp-action="Create">Create a Person</a>
+    <div class="box flex">
+        <div class="flex-1">
+            <select name="searchBy" id="" class="form-input">
+                @foreach (var field in ViewBag.SearchFields)
+                {
+                    if (field.Key == @ViewBag.CurrentSearchBy)
+                    {
+                        <option value="@field.Key" selected="selected">@field.Value</option>
+                    }
+                    else
+                    {
+                        <option value="@field.Key">@field.Value</option>
+                    }
+                }
+                @* searchBy=personName&searchString=abc *@
+            </select>
+        </div>
+        <div class="flex-1">
+            <input type="search" name="searchString" value="@ViewBag.CurrentSearchString" placeholder="search">
+        </div>
+        <div class="flex-1">
+            <button class="button button-blue-back">Search</button>
+            <a asp-controller="Persons" asp-action="Index" class="link-hover">Clear all</a>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                @* Invoking partial view for displaying person Name*@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                { "ColumnName",nameof(PersonResponse.PersonName)},
+                                { "DisplayName","Person Name"}
+                                })
+
+                @* Invoking partial view for displaying person Email*@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.Email)},
+                                { "DisplayName","Email"}
+                                })
+                @* Invoking partial view for displaying person Date Of Birth *@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.DateOfBirth)},
+                                { "DisplayName","Date Of Birth"}
+                                })
+
+                @* Invoking partial view for displaying person Age *@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.Age)},
+                                { "DisplayName","Age"}
+                                })
+
+                @* Invoking partial view for displaying person Gender *@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.Gender)},
+                                { "DisplayName","Gender"}
+                                })
+
+                @* Invoking partial view for displaying person country *@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.Country)},
+                                { "DisplayName","Country"}
+                                })
+                @* Invoking partial view for displaying person address *@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.Address)},
+                                { "DisplayName","Address"}
+                                })
+                @* Invoking partial view for displaying person Receive News Letters *@
+                @await Html.PartialAsync("_GridColumnHeader",new ViewDataDictionary(ViewData){
+                                { "ColumnName",nameof(PersonResponse.ReceiveNewsLetters)},
+                                { "DisplayName","Receive News Letters"}
+                                })
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (PersonResponse person in Model)
+            {
+                <tr>
+                    <td style="width:8%">@person.PersonName</td>
+                    <td style="width:7%">@person.Email</td>
+                    <td style="width:10%">@person.DateOfBirth</td>
+                    <td style="width:2%">@person.Age</td>
+                    <td style="width:5%">@person.Gender </td>
+                    <td style="width:7%">@person.Country</td>
+                    <td style="width:12%">@person.Address</td>
+                    <td style="width:6%">@person.ReceiveNewsLetters</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
