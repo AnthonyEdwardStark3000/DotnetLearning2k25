@@ -1,0 +1,26 @@
+# Ignore Visual Studio temporary files, build results, and
+# .vs folder (Visual Studio IDE-specific settings)
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore Visual Studio solution files (if you want to)
+*.sln
+
+# Build results
+bin/
+obj/
+
+# Backup & crash recovery files
+*.bak
+*.tmp
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Rider project files (optional, if using JetBrains Rider)
+.idea/
+*.sln.iml
