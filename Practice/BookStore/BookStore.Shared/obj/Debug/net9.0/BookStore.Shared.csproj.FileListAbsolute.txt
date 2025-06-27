@@ -1,0 +1,16 @@
+U:\Dotnet_2k25\Practice\BookStore.Shared\bin\Debug\net9.0\BookStore.Shared.deps.json
+U:\Dotnet_2k25\Practice\BookStore.Shared\bin\Debug\net9.0\BookStore.Shared.dll
+U:\Dotnet_2k25\Practice\BookStore.Shared\bin\Debug\net9.0\BookStore.Shared.pdb
+U:\Dotnet_2k25\Practice\BookStore.Shared\bin\Debug\net9.0\BookStore.Domain.dll
+U:\Dotnet_2k25\Practice\BookStore.Shared\bin\Debug\net9.0\BookStore.Domain.pdb
+U:\Dotnet_2k25\Practice\BookStore.Shared\obj\Debug\net9.0\BookStore.Shared.csproj.AssemblyReference.cache
+U:\Dotnet_2k25\Practice\BookStore.Shared\obj\Debug\net9.0\BookStore.Shared.GeneratedMSBuildEditorConfig.editorconfig
+U:\Dotnet_2k25\Practice\BookStore.Shared\obj\Debug\net9.0\BookStore.Shared.AssemblyInfoInputs.cache
+U:\Dotnet_2k25\Practice\BookStore.Shared\obj\Debug\net9.0\BookStore.Shared.AssemblyInfo.cs
+U:\Dotnet_2k25\Practice\BookStore.Shared\obj\Debug\net9.0\BookStore.Shared.csproj.CoreCompileInputs.cache
+U:\Dotnet_2k25\Practice\BookStore.Shared\obj\Debug\net9.0\BookStore.Shared.sourcelink.json
+U:\Dotnet_2k25\Practice\BookStore.Shared\obj\Debug\net9.0\BookStor.C355B228.Up2Date
+U:\Dotnet_2k25\Practice\BookStore.Shared\obj\Debug\net9.0\BookStore.Shared.dll
+U:\Dotnet_2k25\Practice\BookStore.Shared\obj\Debug\net9.0\refint\BookStore.Shared.dll
+U:\Dotnet_2k25\Practice\BookStore.Shared\obj\Debug\net9.0\BookStore.Shared.pdb
+U:\Dotnet_2k25\Practice\BookStore.Shared\obj\Debug\net9.0\ref\BookStore.Shared.dll
