@@ -1,0 +1,6 @@
+@StaticFiles_HostAddress = http://localhost:5111
+
+GET {{StaticFiles_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

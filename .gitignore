@@ -5,5 +5,12 @@
 /Unit_testing_code/CRUDExample/CRUDExample.sln
 /Unit_testing_code/.vs
 ".vs/" 
-".vs/" 
-".vs/" 
+Unit_testing_code/CRUDExample/.vs
+/Thread_Synchronization/Lock/.vs
+/Thread_Synchronization/Lock/Lock.sln
+/Thread_Synchronization/Mutex/.vs
+/Thread_Synchronization/Mutex/Mutex.sln
+/Thread_Synchronization/Semaphore/.vs
+/Thread_Synchronization/Semaphore/Semaphore.sln
+/Thread_Synchronization/SemaphoreSlim/.vs
+/Thread_Synchronization/SemaphoreSlim/SemaphoreSlim.sln
