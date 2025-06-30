@@ -1,3 +1,5 @@
+using Microsoft.Extensions.FileProviders;
+
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions()
 {
     WebRootPath = "StaticContent"
@@ -20,6 +22,13 @@ app.UseSwaggerUI();
 
 // to enable serving static content
 app.UseStaticFiles();
+
+app.UseStaticFiles(new StaticFileOptions()
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(builder.Environment.ContentRootPath,"mywebroot")
+    )
+});
 app.UseRouting();
 app.UseEndpoints(endpoints =>
 {
